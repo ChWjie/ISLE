@@ -1,8 +1,9 @@
+autoOpen: true
 apps:
   - port: 5173
     run: bash cloud-studio-preview.sh
     root: ./scripts
     name: ISLE
+    description: ISLE full stack preview
     autoOpen: true
     autoPreview: true
-    mainPort: true
