@@ -1,8 +1,8 @@
 apps:
   - port: 5173
-    run: bash scripts/cloud-studio-preview.sh
-    root: .
-    name: 智弈法衡（前端 + 后端 + SQLite）
+    run: bash cloud-studio-preview.sh
+    root: ./scripts
+    name: ISLE
     autoOpen: true
     autoPreview: true
     mainPort: true
