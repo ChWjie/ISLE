@@ -50,6 +50,27 @@ Cloud Studio 适合云端开发、调试和 Demo 演示。预览链接需要工�
 
    然后编辑 `backend/.env`，至少设置 `LLM_API_KEY`、`LLM_BASE_URL` 和 `LLM_MODEL`。使用得理检索时，再配置 `DELILEGAL_APP_ID` 与 `DELILEGAL_SECRET`。修改后在「端口」面板重启 `8000` 后端服务。
 
+### Cloud Studio 终端一键启动
+
+已经准备好 `backend/.env` 时，可在仓库根目录执行：
+
+```bash
+bash scripts/cloud-studio.sh start
+```
+
+脚本会安装依赖、测试数据库连接、创建缺失的数据表，并在后台启动后端 `8000` 与前端 `5173`。当前 `.env` 若配置为腾讯云 MySQL，数据库本身由腾讯云托管，不需要在 Cloud Studio 内另启 MySQL 进程。
+
+```bash
+# 查看状态
+bash scripts/cloud-studio.sh status
+
+# 持续查看前后端日志（Ctrl+C 仅退出日志查看，不会停止服务）
+bash scripts/cloud-studio.sh logs
+
+# 停止前后端
+bash scripts/cloud-studio.sh stop
+```
+
 Cloud Studio 官方参考：[从 Git 仓库创建应用](https://ide.cloud.tencent.com/docs/guide/quick_start/developer/create-your-app/)、[`preview.yml` 运行配置](https://ide.cloud.tencent.com/docs/guide/quick_start/developer/how-to-run/)、[端口与 Web 预览](https://ide.cloud.tencent.com/docs/guide/code_editing/productivity_plugin/port-plug/)。
 
 ## 本地运行

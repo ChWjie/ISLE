@@ -13,6 +13,7 @@ venv/
 # Node / Vite
 node_modules/
 dist/
+.cloudstudio-run/
 *.local
 
 # Runtime files
