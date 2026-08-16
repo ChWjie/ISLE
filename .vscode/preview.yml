@@ -1,14 +1,8 @@
 apps:
-  - port: 8000
-    run: python3 -m pip install -r requirements.txt && python3 -m uvicorn app.main:app --host 0.0.0.0 --port 8000
-    root: ./backend
-    name: 后端 API
-    autoOpen: true
-
   - port: 5173
-    run: npm ci && npm run dev -- --host 0.0.0.0
-    root: ./frontend
-    name: 智弈法衡前端
+    run: bash scripts/cloud-studio-preview.sh
+    root: .
+    name: 智弈法衡（前端 + 后端 + SQLite）
     autoOpen: true
     autoPreview: true
     mainPort: true
